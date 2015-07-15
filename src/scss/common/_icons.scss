@@ -1,14 +1,20 @@
-#svg-spritesheet {
-	display:none;
-}
-
 .icon {
 	width:32px;
 	height:32px;
 	display:inline;
+	fill:$primary-color;
 
-	&.is-up {}
-	&.is-down {}
-	&.is-left {}
-	&.is-right {}
+	// icons are assumed to be pointing up by default (if they have a direction)
+	&.is-up {
+	}
+	&.is-right {
+		transform:rotate(90deg);
+	}
+	&.is-down {
+		transform:rotate(180deg);
+	}
+	&.is-left {
+		transform:rotate(270deg);
+	}
+
 }

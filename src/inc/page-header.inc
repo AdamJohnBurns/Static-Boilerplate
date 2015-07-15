@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<div id="svg-spritesheet">
+	<div style="display:none;">
 		<!--( bake /temp/spritesheet.svg)-->
 	</div>
 

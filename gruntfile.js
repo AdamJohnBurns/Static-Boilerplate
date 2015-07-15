@@ -12,7 +12,10 @@ module.exports = function (grunt) {
 
 		config: {
 			// js files need to be included in a specific order to work, so we can't use a wildcard
-			jsSrcFiles: [src + 'js/main.js'],
+			jsSrcFiles: [
+				src + 'js/app/App.js',
+				src + 'js/app/App.ExampleComponent.js'
+			],
 
 			// html files need to be each specifically defined as below due to weirdness with grunt bake
 			htmlFiles: {
