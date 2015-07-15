@@ -1,0 +1,14 @@
+#svg-spritesheet {
+	display:none;
+}
+
+.icon {
+	width:32px;
+	height:32px;
+	display:inline;
+
+	&.is-up {}
+	&.is-down {}
+	&.is-left {}
+	&.is-right {}
+}

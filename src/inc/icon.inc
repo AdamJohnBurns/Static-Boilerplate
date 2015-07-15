@@ -1,0 +1,1 @@
+<svg viewBox="0 0 100 100" class="icon {{class}}"><use xlink:href="#icon-{{icon}}"></use></svg>
