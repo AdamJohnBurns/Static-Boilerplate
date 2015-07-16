@@ -1,18 +1,24 @@
-@import "vendor/normalize";
+//
+//	Includes all other .scss partials for building the main css file
+//
+
+
+// Third party files. These should never be modified for easy updating
+@import 'vendor/normalize';
 
 // Non-markup generating configuration files
-@import "config/colors";
-@import "config/fonts";
-@import "config/media-queries";
-@import "config/mixins";
+@import 'config/colors';
+@import 'config/fonts';
+@import 'config/media-queries';
+@import 'config/mixins';
 
 // Non-element specific items
-@import "common/grid";
-@import "common/icons";
-@import "common/typography";
+@import 'common/grid';
+@import 'common/icons';
+@import 'common/typography';
 
 // Styling applied to specific elements only
-@import "elements/button";
-@import "elements/footer";
-@import "elements/header";
-@import "elements/navigation";
+@import 'elements/button';
+@import 'elements/footer';
+@import 'elements/header';
+@import 'elements/navigation';

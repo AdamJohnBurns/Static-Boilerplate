@@ -1,7 +1,7 @@
 module.exports = function (grunt) {
 	var src = 'src/',
 		dist = 'dist/',
-		temp = 'temp/',
+		temp = '.temp/',
 
 		mozjpeg = require('imagemin-mozjpeg'); // Needed for imagemin to work on jpg files
 
@@ -33,11 +33,26 @@ module.exports = function (grunt) {
 			svgDistFolder: temp + 'svg/', // for outputting individual minified svgs
 			svgDistFiles: temp + 'svg/*.svg', // for reading out individual minified svgs
 			svgDistFile: temp + 'spritesheet.svg', // for outputting the combined svg spritesheet
-			imgDistFiles: [dist + 'img/*.jpg', src + 'img/*.png']
+			imgDistFiles: [dist + 'img/*.jpg', src + 'img/*.png'],
+
+			// additional folders for tasks
+			scssLintIgnoredFiles: [src + 'scss/vendor/**/*.scss']
 		},
 
 
 		// SCSSTASK ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+		// Lints SCSS files for potential problems
+		scsslint: {
+			options: {
+				//bundleExec: true,
+				compact: true,
+				config: '.scss-lint.yml',
+				force: true,
+				exclude: '<%= config.scssLintIgnoredFiles %>'
+			},
+			allFiles: '<%= config.scssSrcFiles %>'
+		},
 
 		// Compile SCSS files into CSS files
 		sass: {
@@ -89,6 +104,15 @@ module.exports = function (grunt) {
 
 
 		// JSTASK /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		// Lints JS files for potential problems
+		jshint: {
+			options: {
+				jshintrc: true,
+				force: true
+			},
+			all: '<%= config.jsSrcFiles %>'
+		},
 
 		// Combines and minifies js files
 		uglify: {
@@ -188,7 +212,9 @@ module.exports = function (grunt) {
 					removeOptionalTags: true
 				},
 				files: {
-					'index.html': 'temp/index.temp.html'
+					// TODO fix this
+					// can we use a wildcard for this, unlike the bake task?
+					'index.html': '.temp/index.temp.html'
 				}
 			}
 		},
@@ -238,22 +264,24 @@ module.exports = function (grunt) {
 	});
 
 	// All grunt tasks
+	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks("grunt-bake");
+	grunt.loadNpmTasks('grunt-combine-media-queries');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
-	grunt.loadNpmTasks('grunt-combine-media-queries');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.loadNpmTasks('grunt-svgstore');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-scss-lint');
 	grunt.loadNpmTasks('grunt-svgmin');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
-	grunt.loadNpmTasks("grunt-bake");
+	grunt.loadNpmTasks('grunt-svgstore');
 
 	// Register the general use tasks for different file types, as these are used multiple times
-	grunt.registerTask('scssTask', ['sass', 'cmq', 'autoprefixer', 'cssmin']);
-	grunt.registerTask('jsTask', ['uglify']);
+	grunt.registerTask('scssTask', ['scsslint', 'sass', 'cmq', 'autoprefixer', 'cssmin']);
+	grunt.registerTask('jsTask', ['jshint', 'uglify']);
 	grunt.registerTask('spriteTask', ['sprite', 'imagemin']);
 	grunt.registerTask('svgTask', ['svgmin', 'svgstore']);
 	grunt.registerTask('imgTask', ['imagemin']);

@@ -14,7 +14,7 @@
 
 <body>
 	<div style="display:none;">
-		<!--( bake /temp/spritesheet.svg)-->
+		<!--( bake /.temp/spritesheet.svg)-->
 	</div>
 
 	<!--[if lt IE 9]>
