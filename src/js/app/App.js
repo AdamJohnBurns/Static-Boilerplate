@@ -1,5 +1,5 @@
 var App = (function () {
-	'use strict'
+	'use strict';
 
 	var DEFAULT_DEBOUNCE_DELAY = 300,
 
@@ -16,7 +16,7 @@ var App = (function () {
 		},
 
 		onDocumentReady: function (callback) {
-			if (document.readyState != 'loading'){
+			if (document.readyState !== 'loading'){
 				callback();
 			} else {
 				document.addEventListener('DOMContentLoaded', callback);
@@ -134,5 +134,5 @@ var App = (function () {
 		isExactBreakpoint: function (breakpoint) {
 			// ???
 		}
-	}
+	};
 })();

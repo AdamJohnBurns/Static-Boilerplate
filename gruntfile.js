@@ -105,10 +105,20 @@ module.exports = function (grunt) {
 
 		// JSTASK /////////////////////////////////////////////////////////////////////////////////////////////////////
 
+		// Check JS code styling
+		jscs: {
+			src: '<%= config.jsSrcFiles %>',
+			options: {
+				config: ".jscsrc",
+				force: true,
+				verbose: false
+			}
+		},
+
 		// Lints JS files for potential problems
 		jshint: {
 			options: {
-				jshintrc: true,
+				jshintrc: '.jshintrc',
 				force: true
 			},
 			all: '<%= config.jsSrcFiles %>'
@@ -275,13 +285,14 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks("grunt-jscs");
 	grunt.loadNpmTasks('grunt-scss-lint');
 	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-svgstore');
 
 	// Register the general use tasks for different file types, as these are used multiple times
 	grunt.registerTask('scssTask', ['scsslint', 'sass', 'cmq', 'autoprefixer', 'cssmin']);
-	grunt.registerTask('jsTask', ['jshint', 'uglify']);
+	grunt.registerTask('jsTask', ['jscs', 'jshint', 'uglify']);
 	grunt.registerTask('spriteTask', ['sprite', 'imagemin']);
 	grunt.registerTask('svgTask', ['svgmin', 'svgstore']);
 	grunt.registerTask('imgTask', ['imagemin']);

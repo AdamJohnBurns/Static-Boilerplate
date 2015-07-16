@@ -27,4 +27,4 @@ Boilerplate code for working on static websites
 * TODO
 
 ### Sass
-* TODO
+* Never use any vendor prefixes - the Autoprefixer task will automatically insert these to match the minimum browser support described in the `Gruntfile`
