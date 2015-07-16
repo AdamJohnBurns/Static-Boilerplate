@@ -1,0 +1,13 @@
+.container {
+	// TODO adjust at different sizes
+	padding: 0 $gutter-width-small;
+	overflow: hidden;
+
+	.column {
+		float:left;
+	}
+
+	&:after {
+		clear:both;
+	}
+}
