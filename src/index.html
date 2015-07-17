@@ -1,30 +1,59 @@
-<!--(bake inc/page-header.inc)-->
+<!--(bake inc/common/page-header.inc)-->
 
 	<p>
 		Hi!
 
-		<!--(bake inc/icon.inc icon="arrow" class="is-left")-->
+		<!--(bake inc/common/icon.inc icon="arrow" class="is-left")-->
 
-		<!--(bake inc/button.inc url="http://www.google.com" class="is-primary" value="testing")-->
+		<!--(bake inc/common/button.inc url="http://www.google.com" class="is-primary" value="testing")-->
 
 	</p>
 
-	<!--(bake inc/container-start.inc class="half-width")-->
-
-		<!--(bake inc/example-component.inc
+	<!--(bake inc/containers/container-start.inc class="container-2column-equal")-->
+		<!--(bake inc/components/component-example.inc
 			heading="My heading yeah" link="http://www.google.com" date="1988"
 			image="img/tile.png"
 			content="This is the content here and we can lay this out in different ways"
 		)-->
-
-	<!--(bake inc/container-divider.inc)-->
-
-		<!--(bake inc/example-component.inc
+	<!--(bake inc/containers/container-divider.inc)-->
+		<!--(bake inc/components/component-example.inc
 			heading="My heading yeah" link="http://www.google.com" date="1988"
 			image="img/tile.png"
 			content="This is the content here and we can lay this out in different ways"
 		)-->
+	<!--(bake inc/containers/container-end.inc)-->
 
-	<!--(bake inc/container-end.inc)-->
 
-<!--(bake inc/page-footer.inc)-->
+	<!--(bake inc/containers/container-start.inc class="container-full-width")-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+	<!--(bake inc/containers/container-end.inc)-->
+
+	<!--(bake inc/containers/container-start.inc class="container-1column")-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+	<!--(bake inc/containers/container-end.inc)-->
+
+	<!--(bake inc/containers/container-start.inc class="container-2column-equal")-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+		<!--(bake inc/containers/container-divider.inc)-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+	<!--(bake inc/containers/container-end.inc)-->
+
+	<!--(bake inc/containers/container-start.inc class="container-3column-equal")-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+		<!--(bake inc/containers/container-divider.inc)-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+		<!--(bake inc/containers/container-divider.inc)-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+	<!--(bake inc/containers/container-end.inc)-->
+
+	<!--(bake inc/containers/container-start.inc class="container-4column-equal")-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+		<!--(bake inc/containers/container-divider.inc)-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+		<!--(bake inc/containers/container-divider.inc)-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+		<!--(bake inc/containers/container-divider.inc)-->
+		<!--(bake inc/components/component-example.inc heading="Column")-->
+	<!--(bake inc/containers/container-end.inc)-->
+
+<!--(bake inc/common/page-footer.inc)-->

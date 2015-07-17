@@ -16,3 +16,11 @@
 	}
 	@return nth($range, 2);
 }
+
+
+// This mixin must be used instead of directly calling media queries.
+@mixin media-query($query) {
+	@media #{$query} {
+		@content;
+	}
+}

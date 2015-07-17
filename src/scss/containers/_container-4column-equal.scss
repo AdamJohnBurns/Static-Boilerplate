@@ -1,0 +1,9 @@
+.container-4column-equal {
+	.column {
+		width:100%;
+
+		@include media-query($tablet-breakpoint-up) {
+			width:33.33%;
+		}
+	}
+}

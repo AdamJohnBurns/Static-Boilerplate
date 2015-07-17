@@ -109,9 +109,11 @@ var App = (function () {
 			return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 		},
 
-		componentClasses: {
-			EXAMPLE_COMPONENT: '.example-component'
-		},
+		// This is extended with the class for each component
+		componentClasses: {},
+
+		// This is extended with the code for each component
+		Components: {},
 
 		// these need to match the breakpoints specified in scss/config/_media-queries.scss
 		breakpointWidths: {

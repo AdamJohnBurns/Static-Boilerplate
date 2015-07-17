@@ -9,20 +9,26 @@
 // Non-markup generating configuration files
 @import 'config/colors';
 @import 'config/fonts';
-@import 'config/layout';
 @import 'config/media-queries';
 @import 'config/mixins';
+@import 'config/layout';
 
 // Non-element specific items
-@import 'common/icons';
+@import 'common/_button';
+@import 'common/icon';
+@import 'common/_navigation';
 @import 'common/typography';
 
 // Containers used for layout
 @import 'containers/container';
-@import 'containers/container-half-width';
+@import 'containers/container-1column';
+@import 'containers/container-2column-equal';
+@import 'containers/container-3column-equal';
+@import 'containers/container-4column-equal';
+@import 'containers/container-full-width';
 
-// Styling applied to specific elements only
-@import 'elements/button';
-@import 'elements/footer';
-@import 'elements/header';
-@import 'elements/navigation';
+// Components, the individual pieces of the site
+@import 'components/_component-example';
+@import 'components/_component-footer';
+@import 'components/_component-header';
+@import 'components/_component-navigation';

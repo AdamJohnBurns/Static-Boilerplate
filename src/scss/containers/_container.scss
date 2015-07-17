@@ -1,13 +1,37 @@
 .container {
 	// TODO adjust at different sizes
-	padding: 0 $gutter-width-small;
+	padding: 0 $container-gutter-width-small;
 	overflow: hidden;
+	max-width: $container-max-width;
 
 	.column {
-		float:left;
+		float: left;
+		box-sizing: border-box;
+
+		padding: 0 $column-gutter-width-small/2;
+
+		@include media-query($medium-only) {
+			padding: 0 $column-gutter-width-medium/2;
+		}
+
+		@include media-query($large-only) {
+			padding: 0 $column-gutter-width-large/2;
+		}
+
+		@include media-query($xlarge-up) {
+			padding: 0 $column-gutter-width-xlarge/2;
+		}
+
+		@include media-query($xxlarge-up) {
+			padding: 0 $column-gutter-width-xxlarge/2;
+		}
+
+		@include media-query($huge-up) {
+			padding: 0 $column-gutter-width-huge/2;
+		}
 	}
 
 	&:after {
-		clear:both;
+		clear: both;
 	}
 }

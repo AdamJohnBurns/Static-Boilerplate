@@ -14,7 +14,10 @@ module.exports = function (grunt) {
 			// js files need to be included in a specific order to work, so we can't use a wildcard
 			jsSrcFiles: [
 				src + 'js/app/App.js',
-				src + 'js/app/App.ExampleComponent.js'
+				src + 'js/app/components/App.Component.Example.js',
+				src + 'js/app/components/App.Component.Footer.js',
+				src + 'js/app/components/App.Component.Header.js',
+				src + 'js/app/components/App.Component.Navigation.js'
 			],
 
 			// html files need to be each specifically defined as below due to weirdness with grunt bake
@@ -28,7 +31,7 @@ module.exports = function (grunt) {
 			imgSrcFiles: [src + 'img/*.jpg', src + 'img/*.png'],
 			scssDistFolder: dist + 'css/',
 			scssDistFile: dist + 'css/' + 'main.css',
-			htmlSrcFiles: [src + '*.html', src + 'inc/*.inc'],
+			htmlSrcFiles: [src + '*.html', src + 'inc/**/*.inc'],
 			jsDistFile: dist + 'js/scripts.js',
 			svgDistFolder: temp + 'svg/', // for outputting individual minified svgs
 			svgDistFiles: temp + 'svg/*.svg', // for reading out individual minified svgs

@@ -1,9 +1,31 @@
 //
-//	Variables used to control overall page layout at different page sizes
+//	Variables used to control overall page layout at different page sizes. These are closely tied to the
+// 	media queries defined in _media-queries.scss
 //
 
+// Primary unit of measurement, all layout values should be a percentage of this unit for consistency
 $primary-unit: 16px;
 
-$gutter-width-small: $primary-unit / 2;
+// Maximum width of containers at highest breakpoint
+$container-max-width: 1280px;
 
-//$full-width-breakpoint: small-down?
+// Defines the gutter width on each container at different breakpoints
+$container-gutter-width-small: $primary-unit;
+$container-gutter-width-medium: $primary-unit;
+$container-gutter-width-large: $primary-unit;
+$container-gutter-width-xlarge: $primary-unit;
+$container-gutter-width-xxlarge: $primary-unit;
+$container-gutter-width-huge: $primary-unit;
+
+// Defines the gutter width of each column of each container at different breakpoints
+$column-gutter-width-small: $primary-unit / 2;
+$column-gutter-width-medium: $primary-unit / 2;
+$column-gutter-width-large: $primary-unit / 2;
+$column-gutter-width-xlarge: $primary-unit / 2;
+$column-gutter-width-xxlarge: $primary-unit / 2;
+$column-gutter-width-huge: $primary-unit / 2;
+
+// Defines the breakpoints at which different overall layouts occur. Because this is a mobile first
+// site, by default we're at the $mobile-breakpoint
+$tablet-breakpoint-up: $medium-up;
+$desktop-breakpoint-up: $xlarge-up;

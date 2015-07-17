@@ -1,4 +1,4 @@
-<div class="example-component">
+<div class="component-example">
 	<h1>{{heading}}</h1>
 	<div class="info">
 		<a href="{{link}}" target="_blank">Link</a>
