@@ -109,11 +109,18 @@ var App = (function () {
 			return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 		},
 
-		// This is extended with the class for each component
-		componentClasses: {},
-
 		// This is extended with the code for each component
-		Components: {},
+		Component: {},
+
+		// Each component must be registered.
+		registerComponent: function (componentClass, callback) {
+			// Only run the components code if it exists on the page
+			if (this.doesComponentExist(componentClass)) {
+				this.onDocumentReady(function () {
+					callback();
+				});
+			}
+		},
 
 		// these need to match the breakpoints specified in scss/config/_media-queries.scss
 		breakpointWidths: {

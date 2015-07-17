@@ -2,7 +2,8 @@
 	.column {
 		width:100%;
 
-		@include media-query($tablet-breakpoint-up) {
+		@include media-query($medium-up) {
+		//@media #{$medium-up} {
 			width:50%;
 		}
 	}

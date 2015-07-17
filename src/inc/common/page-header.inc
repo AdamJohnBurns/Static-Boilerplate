@@ -21,4 +21,10 @@
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<!--( bake /src/inc/components/component-header.inc)-->
+	<!--( bake /src/inc/containers/container-start.inc class="container-1column component-container-header")-->
+		<!--( bake /src/inc/components/component-header.inc)-->
+	<!--( bake /src/inc/containers/container-end.inc)-->
+
+	<!--( bake /src/inc/containers/container-start.inc class="container-1column component-container-navigation")-->
+		<!--( bake /src/inc/components/component-navigation.inc)-->
+	<!--( bake /src/inc/containers/container-end.inc)-->

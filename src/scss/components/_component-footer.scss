@@ -1,3 +1,21 @@
-.component-footer {
+.component-container-footer {
+	background:$black-color;
+	margin-bottom:0;
+}
 
+.component-footer {
+	padding:$container-vertical-spacing-small 0;
+
+	.icon {
+		fill:$white-color;
+	}
+
+	.social-links {
+		text-align:center;
+	}
+
+	.copyright {
+		color:$white-color;
+		text-align:center;
+	}
 }

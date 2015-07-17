@@ -1,13 +1,56 @@
 .container {
-	// TODO adjust at different sizes
-	padding: 0 $container-gutter-width-small;
 	overflow: hidden;
 	max-width: $container-max-width;
+	margin: 0 auto;
+
+	// TODO make a mixin for all these media querys
+	// can we make a mixin with some sort of modifier per breakpoint? so 0.25 for small, 0.5 for med, etc
+
+	margin-bottom: $container-vertical-spacing-small;
+	@include media-query($medium-only) {
+		margin-bottom: 0 $container-vertical-spacing-medium/2;
+	}
+
+	@include media-query($large-only) {
+		margin-bottom: 0 $container-vertical-spacing-large/2;
+	}
+
+	@include media-query($xlarge-up) {
+		margin-bottom: 0 $container-vertical-spacing-xlarge/2;
+	}
+
+	@include media-query($xxlarge-up) {
+		margin-bottom: 0 $container-vertical-spacing-xxlarge/2;
+	}
+
+	@include media-query($huge-up) {
+		margin-bottom: 0 $container-vertical-spacing-huge/2;
+	}
+
+	padding: 0 $container-gutter-width-small;
+	@include media-query($medium-only) {
+		padding: 0 $container-gutter-width-medium/2;
+	}
+
+	@include media-query($large-only) {
+		padding: 0 $container-gutter-width-large/2;
+	}
+
+	@include media-query($xlarge-up) {
+		padding: 0 $container-gutter-width-xlarge/2;
+	}
+
+	@include media-query($xxlarge-up) {
+		padding: 0 $container-gutter-width-xxlarge/2;
+	}
+
+	@include media-query($huge-up) {
+		padding: 0 $container-gutter-width-huge/2;
+	}
 
 	.column {
 		float: left;
 		box-sizing: border-box;
-
 		padding: 0 $column-gutter-width-small/2;
 
 		@include media-query($medium-only) {

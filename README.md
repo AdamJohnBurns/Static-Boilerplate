@@ -28,3 +28,7 @@ Boilerplate code for working on static websites
 
 ### Sass
 * Never use any vendor prefixes - the Autoprefixer task will automatically insert these to match the minimum browser support described in the `Gruntfile`
+* Styling should *usually* not be tied to a specific html <element>. Instead, add a meaningful class name and add the styling to that.
+* Containers start with the prefix 'container-'
+* Components start with the prefix 'component-'
+* Classes used to describe state start with the prefix 'is-'

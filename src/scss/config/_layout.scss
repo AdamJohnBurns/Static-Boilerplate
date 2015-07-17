@@ -17,6 +17,14 @@ $container-gutter-width-xlarge: $primary-unit;
 $container-gutter-width-xxlarge: $primary-unit;
 $container-gutter-width-huge: $primary-unit;
 
+// Defines vertical spacing between containers at different breakpoints
+$container-vertical-spacing-small: $primary-unit;
+$container-vertical-spacing-medium: $primary-unit;
+$container-vertical-spacing-large: $primary-unit;
+$container-vertical-spacing-xlarge: $primary-unit;
+$container-vertical-spacing-xxlarge: $primary-unit;
+$container-vertical-spacing-huge: $primary-unit;
+
 // Defines the gutter width of each column of each container at different breakpoints
 $column-gutter-width-small: $primary-unit / 2;
 $column-gutter-width-medium: $primary-unit / 2;

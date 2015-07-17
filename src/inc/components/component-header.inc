@@ -1,3 +1,3 @@
 <header class="component-header">
-	<p>This is the header.</p>
+	<div class="title">Header</div>
 </header>

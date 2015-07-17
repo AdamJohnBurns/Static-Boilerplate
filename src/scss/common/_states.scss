@@ -1,0 +1,47 @@
+//
+//	States used by any element
+//
+
+// Visibility (add a transition here)
+.is-visible {
+	opacity:1;
+}
+
+.is-invisible {
+	opacity:0;
+}
+
+// Foreground colors
+.is-color-primary {
+	color-color:$primary-color;
+}
+
+.is-color-secondary {
+	color-color:$secondary-color;
+}
+
+.is-color-white {
+	color-color:$white-color;
+}
+
+.is-color-black {
+	color-color:$black-color;
+}
+
+// Rotations
+.is-up {
+	transform: rotate(270deg);
+}
+
+.is-right {
+	// the default rotation
+}
+
+.is-down {
+	transform: rotate(90deg);
+
+}
+
+.is-left {
+	transform: rotate(180deg);
+}

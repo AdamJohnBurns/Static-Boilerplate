@@ -9,14 +9,15 @@
 // Non-markup generating configuration files
 @import 'config/colors';
 @import 'config/fonts';
-@import 'config/media-queries';
 @import 'config/mixins';
+@import 'config/media-queries';
 @import 'config/layout';
 
 // Non-element specific items
-@import 'common/_button';
+@import 'common/button';
 @import 'common/icon';
-@import 'common/_navigation';
+@import 'common/navigation';
+@import 'common/states';
 @import 'common/typography';
 
 // Containers used for layout
