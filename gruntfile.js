@@ -22,6 +22,8 @@ module.exports = function (grunt) {
 
 			// html files need to be each specifically defined as below due to weirdness with grunt bake
 			htmlFiles: {
+				'dist/about.html': src + 'about.html',
+				'dist/contact.html': src + 'contact.html',
 				'dist/index.html': src + 'index.html'
 			},
 
@@ -39,7 +41,8 @@ module.exports = function (grunt) {
 			imgDistFiles: [dist + 'img/*.jpg', src + 'img/*.png'],
 
 			// additional folders for tasks
-			scssLintIgnoredFiles: [src + 'scss/vendor/**/*.scss']
+			scssLintIgnoredFiles: [src + 'scss/vendor/**/*.scss'],
+			htmlMinFiles: [dist + '*.html']
 		},
 
 
@@ -224,10 +227,12 @@ module.exports = function (grunt) {
 					removeStyleLinkTypeAttributes: true,
 					removeOptionalTags: true
 				},
-				files: {
+				files:
+				{
 					// TODO fix this
 					// can we use a wildcard for this, unlike the bake task?
 					'index.html': '.temp/index.temp.html'
+					// '<%= config.htmlMinFiles %>'
 				}
 			}
 		},
