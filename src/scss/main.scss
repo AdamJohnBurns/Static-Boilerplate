@@ -7,6 +7,7 @@
 @import 'vendor/normalize';
 
 // Non-markup generating configuration files
+@import 'config/animation';
 @import 'config/colors';
 @import 'config/fonts';
 @import 'config/mixins';
@@ -16,12 +17,14 @@
 // Non-element specific items
 @import 'common/button';
 @import 'common/icon';
+@import 'common/page';
 @import 'common/form';
 @import 'common/states';
 @import 'common/typography';
 
 // Containers used for layout
 @import 'containers/container';
+@import 'containers/container-1column-full-width-background';
 @import 'containers/container-1column';
 @import 'containers/container-2column-equal';
 @import 'containers/container-3column-equal';
@@ -29,8 +32,10 @@
 @import 'containers/container-full-width';
 
 // Components, the individual pieces of the site
+@import 'components/_component-content-tile';
 @import 'components/_component-example';
 @import 'components/_component-footer';
-@import 'components/_component-header';
 @import 'components/_component-hero';
+@import 'components/_component-info-tile';
 @import 'components/_component-navigation';
+@import 'components/_component-page-title';

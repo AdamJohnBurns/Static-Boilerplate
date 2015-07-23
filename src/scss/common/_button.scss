@@ -1,3 +1,15 @@
 .button {
 	background: $primary-color;
+	color:$white-color;
+	font-family:$heading-primary-font;
+	text-transform:uppercase;
+	border-radius:$primary-unit;
+	height:$primary-unit * 2;
+	line-height:$primary-unit * 2;
+	font-size:$primary-unit / 1.5;
+	padding:0 $primary-unit;
+	text-align:center;
+	display:inline-block;
+	cursor:pointer;
+	margin:0 $primary-unit 0 0;
 }

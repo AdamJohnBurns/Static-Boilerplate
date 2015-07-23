@@ -1,0 +1,10 @@
+.container-1column-full-width-background {
+	max-width: none;
+
+	.column {
+		max-width: $container-max-width;
+		margin: 0 auto;
+		float:none;
+		width:100%;
+	}
+}

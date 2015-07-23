@@ -1,0 +1,30 @@
+.component-info-tile {
+	.info-tile-image {
+		width:100%;
+		opacity:0.9;
+		transition:$standard-transition opacity;
+		-webkit-backface-visibility: hidden;
+	}
+
+	&:hover {
+		.info-tile-image {
+			opacity:1;
+		}
+	}
+
+	.info-tile-text-container {
+		padding:$primary-unit;
+	}
+
+	.info-tile-heading {
+		font-family:$heading-primary-font;
+		font-size:$primary-unit * 2;
+		color:$black-color;
+	}
+
+	.info-tile-text {
+		font-family:$body-primary-font;
+		font-size:$primary-unit;
+		color:$black-color;
+	}
+}

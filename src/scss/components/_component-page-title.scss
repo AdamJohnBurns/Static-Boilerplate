@@ -1,0 +1,13 @@
+.component-container-page-title {
+	background:$black-color;
+}
+
+.component-page-title {
+	padding:$primary-unit / 2 0;
+
+	.title {
+		color:$white-color;
+		font-family:$heading-primary-font;
+		font-size:$primary-unit * 2;
+	}
+}

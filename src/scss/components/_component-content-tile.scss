@@ -1,0 +1,21 @@
+.component-content-tile {
+	.content-tile-image {
+		width:100%;
+	}
+
+	.content-tile-text-container {
+		padding:$primary-unit;
+	}
+
+	.content-tile-heading {
+		font-family:$heading-primary-font;
+		font-size:$primary-unit * 2;
+		color:$black-color;
+	}
+
+	.content-tile-text {
+		font-family:$body-primary-font;
+		font-size:$primary-unit;
+		color:$black-color;
+	}
+}

@@ -1,10 +1,11 @@
-.component-container-footer {
-	background:$black-color;
+.container.component-container-footer {
+	background:$almost-black-color;
 	margin-bottom:0;
 }
 
 .component-footer {
-	padding:$container-vertical-spacing-small 0;
+	padding:$primary-unit 0 $primary-unit*2 0;
+	overflow:hidden;
 
 	.icon {
 		fill:$white-color;
@@ -12,10 +13,22 @@
 
 	.social-links {
 		text-align:center;
+
+		@include media-query($large-up) {
+			float:right;
+		}
 	}
 
 	.copyright {
 		color:$white-color;
 		text-align:center;
+		font-size:$primary-unit / 1.5;
+		font-family:$heading-primary-font;
+		text-transform:uppercase;
+		margin:0 0 $primary-unit 0;
+
+		@include media-query($large-up) {
+			float:left;
+		}
 	}
 }

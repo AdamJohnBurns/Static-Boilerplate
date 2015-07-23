@@ -10,7 +10,7 @@ $primary-unit: 16px;
 $container-max-width: 1280px;
 
 // Defines the gutter width on each container at different breakpoints
-$container-gutter-width-small: $primary-unit;
+$container-gutter-width-small: $primary-unit * 2;
 $container-gutter-width-medium: $primary-unit;
 $container-gutter-width-large: $primary-unit;
 $container-gutter-width-xlarge: $primary-unit;
@@ -37,3 +37,6 @@ $column-gutter-width-huge: $primary-unit / 2;
 // site, by default we're at the $mobile-breakpoint
 $tablet-breakpoint-up: $medium-up;
 $desktop-breakpoint-up: $xlarge-up;
+
+// Height of header, as it's sticky we need to know how far to offset the page body
+$navigation-height: $primary-unit * 3;

@@ -24,6 +24,7 @@ module.exports = function (grunt) {
 			htmlFiles: {
 				'dist/about.html': src + 'about.html',
 				'dist/contact.html': src + 'contact.html',
+				'dist/content.html': src + 'content.html',
 				'dist/index.html': src + 'index.html'
 			},
 

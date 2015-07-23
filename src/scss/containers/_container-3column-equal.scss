@@ -2,7 +2,7 @@
 	.column {
 		width:100%;
 
-		@include media-query($medium-up) {
+		@include media-query($large-up) {
 			width:33.33%;
 		}
 	}
