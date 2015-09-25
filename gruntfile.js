@@ -62,6 +62,21 @@ module.exports = function (grunt) {
 		},
 
 		// Compile SCSS files into CSS files
+		/*sass: {
+			comps: {
+				options: {
+					style: 'expanded'
+				},
+				files: [{
+					expand: true,
+					src: '<%= config.scssSrcFiles %>',
+					dest: '<%= config.scssDistFolder %>',
+					ext: '.css',
+					flatten: true
+				}]
+			}
+		},*/
+		
 		sass: {
 			comps: {
 				options: {
@@ -291,7 +306,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass')
+	// grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks("grunt-jscs");
@@ -300,7 +316,7 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-svgstore');
 
 	// Register the general use tasks for different file types, as these are used multiple times
-	grunt.registerTask('scssTask', ['scsslint', 'sass', 'cmq', 'autoprefixer', 'cssmin']);
+	grunt.registerTask('scssTask', [/*'scsslint',*/ 'sass', 'cmq', 'autoprefixer', 'cssmin']);
 	grunt.registerTask('jsTask', ['jscs', 'jshint', 'uglify']);
 	grunt.registerTask('spriteTask', ['sprite', 'imagemin']);
 	grunt.registerTask('svgTask', ['svgmin', 'svgstore']);
